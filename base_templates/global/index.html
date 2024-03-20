@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    {% include 'restaurant/partials/head.html' %}
+    <title>{% block title %}{% endblock title %} Restaurant</title>
+</head>
+
+    <body>
+        {% include 'restaurant/partials/header.html' %}
+        {% include 'restaurant/partials/search.html' %}
+
+        <main class="main-content-container">
+            {% block content %}
+
+            {% endblock content %}
+        </main>
+        {% include 'restaurant/partials/footer.html' %}
+    </body>
+</html>

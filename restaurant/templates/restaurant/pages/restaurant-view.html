@@ -1,0 +1,9 @@
+{% extends 'global/index.html' %}
+
+{% block title %}{{ restaurant.title }} | {% endblock title %}
+
+{% block content %}
+    <div class="main-content main-content-detail container">
+        {% include 'restaurant/partials/restaurant.html' %}
+    </div>
+{% endblock content %}

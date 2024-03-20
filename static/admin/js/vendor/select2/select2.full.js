@@ -1957,7 +1957,7 @@ S2.define('select2/selection/allowClear',[
     var removeAll = this.options.get('translations').get('removeAllItems');
 
     var $remove = $(
-      '<span class="select2-selection__clear" title="' + removeAll() +'">' +
+      '<span class="select2-selection__clear" name="' + removeAll() +'">' +
         '&times;' +
       '</span>'
     );

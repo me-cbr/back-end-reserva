@@ -168,6 +168,7 @@ body {
 
 .restaurant-list-item {
     max-width: 64rem;
+    height: fit-content;
 }
 
 .restaurant-list-item:hover {
@@ -227,13 +228,13 @@ body {
     font-size: 1.6rem;
 }
 
-.restaurant-type-item a {
+.restaurant-type-item p {
     color: var(--color-primary);
     transition: all 300ms ease-in-out;
     text-decoration: none;
 }
 
-.restaurant-type-item a:hover {
+.restaurant-type-item p:hover {
     color: var(--color-primary-dark);
 }
 
@@ -268,6 +269,15 @@ body {
     flex-shrink: 1;
     flex-grow: 1;
     text-align: center;
+}
+
+.restaurant-footer{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
 }
 
 .restaurant-footer a {
@@ -305,4 +315,75 @@ body {
 
 .icon-footer{
     font-size: 6.5rem;
+}
+
+.main-content-detail  .restaurant-list-item {
+  max-width: 84rem;
+  margin: 0 auto;
+}
+
+.main-content-detail .restaurant-list-item:hover {
+  transform: scale(1);
+  box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.restaurant-details {
+  padding: var(--spacing-gutter-medium);
+}
+
+.restaurant-title-container a {
+  text-decoration: none;
+  color: var(--color-primary-dark);
+}
+
+.rating{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) rotateY(180deg);
+  display: flex;
+}
+
+.rating input{
+  display: none;
+}
+
+.rating label{
+    display: block;
+    cursor: pointer;
+    width: 50px;
+}
+
+.rating label:before{
+  content: '\f005';
+  font-family: fontAwesome;
+  position: relative;
+  display: block;
+  font-size: 50px;
+  color: #0e1316;
+}
+
+.rating label:after{
+  content: '\f005';
+  font-family: fontAwesome;
+  position: absolute;
+  display: block;
+  font-size: 50px;
+  color: #ffff00;
+  top: 0;
+  opacity: 0;
+  transition: .5;
+  text-shadow: 0 4px 5px rgba(0, 0, 0, .5);
+}
+.rating label:hover:after,
+.rating label:hover ~ label:after,
+.rating input:checked ~ label:after{
+  opacity: 1;
+}
+
+.avaliation-title{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+
 }
