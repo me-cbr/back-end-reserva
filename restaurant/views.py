@@ -1,6 +1,5 @@
 import os
 
-from django.contrib import messages
 from django.db.models import Q
 from django.http.response import Http404
 from django.shortcuts import render, redirect, get_object_or_404
@@ -16,9 +15,6 @@ PER_PAGE = int(os.environ.get('PER_PAGE', 6))
 def home(request):
     restaurant = Restaurant.objects.all().order_by('-id')
 
-    messages.error(request, 'Error message')
-    messages.success(request, 'Success message')
-    messages.info(request, 'Info message')
     page, pagination = make_pagination(request, restaurant, PER_PAGE)
 
     return render(request, 'restaurant/pages/home.html', context={
