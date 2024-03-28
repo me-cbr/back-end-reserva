@@ -32,5 +32,3 @@ class Classification(models.Model):
     restaurant = models.ForeignKey(Restaurant, on_delete=models.SET_NULL, null=True)
     classification = models.IntegerField(default='')
     comment = models.TextField(default='')
-    date = models.DateTimeField(auto_now_add=True)
-    
