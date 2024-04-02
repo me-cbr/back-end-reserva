@@ -1,0 +1,111 @@
+:root {
+    --color-primary: #269fe6;
+    --color-primary-hover: #2086c2;
+    --color-primary-dark: #13141f;
+    --color-primary-dark-hover: #212336;
+    --color-primary-light: #d4ecfa;
+    --color-primary-light-hover: #bdd8e7;
+    --color-primary-dark-red: #640214;
+    --color-red-time: #B40404;
+
+    --color-white: #fff;
+    --color-black: #000;
+
+    --color-dark-text: #444;
+    --color-info-light: #cce5ff;
+    --color-debug-light: #cce5ff;
+    --color-success-light: #d4edda;
+    --color-alert-light: #fff3cd;
+    --color-warning-light: #fff3cd;
+    --color-error-light: #f8d7da;
+
+    --color-info-dark: #4d86c4;
+    --color-debug-dark: #4d86c4;
+    --color-success-dark: #4a9c5d;
+    --color-alert-dark: #927f40;
+    --color-warning-dark: #927f40;
+    --color-error-dark: #da525d;
+    --color-type-rest: #0174DF;
+
+    --color-gray-0: #f9f9f9;
+    --color-gray-1: #e0e0e0;
+    --color-gray-2: #D8D9D3;
+    --color-gray-3: #c7c7c7;
+    --color-gray-4: #aeaeae;
+    --color-gray-5: #959595;
+    --color-gray-6: #7d7d7d;
+    --color-gray-7: #646464;
+    --color-gray-8: #4b4b4b;
+    --color-gray-9: #323232;
+    --color-gray-10: #191919;
+
+    --color-yellow-1: #F4FA58;
+    --color-yellow-2: #F7FE2E;
+    --color-yellow-3: #FFFF00;
+    --color-yellow-4: #D7DF01;
+    --color-yellow-5: #AEB404;
+
+    --font-primary: sans-serif;
+    --font-first-title: "Unna", serif;
+    --font-second-title: "Libre Caslon Display", serif;
+
+
+    --spacing-gutter-medium: 3rem;
+    --spacing-gutter-large: 4rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+  text-align: center;
+  padding-top: 50px;
+  font-size: 1.6rem;
+  background: var(--color-gray-1);
+  color: var(--color-dark-text);
+}
+
+.container {
+    max-width: 144rem;
+    margin: 0 auto;
+    padding: var(--spacing-gutter-medium);
+}
+
+.main-header-container {
+    background: var(--color-primary-dark-red);
+}
+
+.main-logo {
+    text-decoration: none;
+    font-family: var(--font-first-title);
+    font-weight: 700;
+    font-style: italic;
+    font-size: 7.5rem;
+    color: var(--color-white);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.main-logo-icon {
+    margin-right: 2rem;
+}
+
+.estrelas input[type=radio] {
+  display: none;
+}
+.estrelas label i.fa{
+  font-size: 2.5em
+}
+.estrelas label i.fa:before {
+  content:'\f005';
+  color: #FC0;
+}
+.estrelas input[type=radio]:checked ~ label i.fa:before {
+  color: #CCC;
+}

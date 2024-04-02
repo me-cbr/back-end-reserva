@@ -3,9 +3,8 @@ import os
 from django.db.models import Q
 from django.http.response import Http404
 from django.shortcuts import render, redirect, get_object_or_404
-from utils.restaurant.pagination import make_pagination
+from utils.pagination import make_pagination
 
-from utils.restaurant.utils import calculate_classification
 from .forms import ClassificationForm
 from .models import *
 
@@ -56,7 +55,7 @@ def search(request):
 
     page, pagination = make_pagination(request, restaurant, PER_PAGE)
 
-    return render(request, 'restaurant/pages/search.html', {
+    return render(request, 'restaurant/pages/../base_templates/global/partials/search.html', {
         'page_title': f'Search for "{search_term}" |',
         'search_term': search_term,
         'restaurants': page,
